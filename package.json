@@ -1,6 +1,6 @@
 {
   "name": "aws-cognito-idp-userpool-domain",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "engines": {
     "node": ">=4.0"
   },
@@ -26,6 +26,7 @@
   "scripts": {},
   "devDependencies": {},
   "dependencies": {
-    "bluebird": "^3.0.6"
+    "bluebird": "^3.0.6",
+    "chalk": "2.4.1"
   }
 }
