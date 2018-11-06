@@ -15,7 +15,6 @@ provider:
   runtime: nodejs8.10
   profile: default
   region: us-east-1
-  environment: ${self:custom.settings.${self:custom.stage}}  
 ```
 
 ### AWS::Cognito::UserPool resource
