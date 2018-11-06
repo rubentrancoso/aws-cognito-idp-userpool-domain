@@ -8,6 +8,9 @@ You can find this and other plugins on [Severless Community Plugins](https://git
 ### installation
 npm install aws-cognito-idp-userpool-domain
 
+### npm package
+[https://www.npmjs.com/package/aws-cognito-idp-userpool-domain](https://www.npmjs.com/package/aws-cognito-idp-userpool-domain)
+
 ### Serverless.yml
 ```
 service: myservice
