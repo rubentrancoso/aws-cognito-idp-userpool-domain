@@ -50,3 +50,72 @@ Resources:
       GenerateSecret: true
 ```
  
+ # Deploy Output
+ ### # serverless deploy -v -s dev
+ 
+ ```
+ Serverless: Packaging service...
+Serverless: Creating Stack...
+Serverless: Checking Stack create progress...
+CloudFormation - CREATE_IN_PROGRESS - AWS::CloudFormation::Stack - myservice-dev
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_IN_PROGRESS - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_COMPLETE - AWS::S3::Bucket - ServerlessDeploymentBucket
+CloudFormation - CREATE_COMPLETE - AWS::CloudFormation::Stack - myservice-dev
+Serverless: Stack create finished...
+Serverless: Uploading CloudFormation file to S3...
+Serverless: Uploading artifacts...
+Serverless: Validating template...
+Serverless: Updating Stack...
+Serverless: Checking Stack update progress...
+CloudFormation - UPDATE_IN_PROGRESS - AWS::CloudFormation::Stack - myservice-dev
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPool - MyUserpool
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPool - MyUserpool
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::UserPool - MyUserpool
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPoolClient - MyCognitoUserPoolClient
+CloudFormation - CREATE_IN_PROGRESS - AWS::Cognito::UserPoolClient - MyCognitoUserPoolClient
+CloudFormation - CREATE_COMPLETE - AWS::Cognito::UserPoolClient - MyCognitoUserPoolClient
+CloudFormation - UPDATE_COMPLETE_CLEANUP_IN_PROGRESS - AWS::CloudFormation::Stack - myservice-dev
+CloudFormation - UPDATE_COMPLETE - AWS::CloudFormation::Stack - myservice-dev
+Serverless: Stack update finished...
+Service Information
+service: myservice
+stage: dev
+region: us-east-1
+stack: myservice-dev
+api keys:
+  None
+endpoints:
+  None
+functions:
+  None
+
+Stack Outputs
+UserPoolIdMyUserpool: us-east-1_Ea2rfHMLF
+ServerlessDeploymentBucketName: myservice-dev-serverlessdeploymentbucket-a34u7pvypfh
+
+Plugin [aws-cognito-idp-userpool-domain]: process_deploy started.
+Plugin [aws-cognito-idp-userpool-domain]: Creating user pool domain...
+Plugin [aws-cognito-idp-userpool-domain]: userpoolid: [us-east-1_Ea2rfHMLF], domainname: [myservice-dev]
+Plugin [aws-cognito-idp-userpool-domain]: domain created
+Plugin [aws-cognito-idp-userpool-domain]: done.
+Plugin [aws-cognito-idp-userpool-domain]: process_deploy finished.
+```
+
+# Remove Output
+### # serverless remove
+
+```
+Plugin [aws-cognito-idp-userpool-domain]: process_remove started.
+Plugin [aws-cognito-idp-userpool-domain]: Deleting user pool domain...
+Plugin [aws-cognito-idp-userpool-domain]: userpoolid: [us-east-1_Ea2rfHMLF], domainname: [myservice-dev]
+Plugin [aws-cognito-idp-userpool-domain]: domain deleted
+Plugin [aws-cognito-idp-userpool-domain]: done.
+Plugin [aws-cognito-idp-userpool-domain]: process_remove finished.
+Serverless: Getting all objects in S3 bucket...
+Serverless: Removing objects in S3 bucket...
+Serverless: Removing Stack...
+Serverless: Checking Stack removal progress...
+.......
+Serverless: Stack removal finished...
+```
