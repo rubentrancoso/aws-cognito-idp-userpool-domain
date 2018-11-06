@@ -3,6 +3,8 @@
 ### description
 whit this plugin you will be able to manage a hosted aws domain to the Cognito Userpool with Serverless Framework.
 
+### installation
+npm install aws-cognito-idp-userpool-domain
 
 ### Serverless.yml
 ```
