@@ -11,7 +11,7 @@ $ npm install aws-cognito-idp-userpool-domain
 ```
 
 ### npm package
-[https://www.npmjs.com/package/aws-cognito-idp-userpool-domain](https://www.npmjs.com/package/aws-cognito-idp-userpool-domain)
+<a href="https://www.npmjs.com/package/aws-cognito-idp-userpool-domain" target="_blank">https://www.npmjs.com/package/aws-cognito-idp-userpool-domain</a>
 
 ### Serverless.yml
 ```
