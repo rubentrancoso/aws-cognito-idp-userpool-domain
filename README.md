@@ -1,5 +1,15 @@
 # aws-cognito-idp-userpool-domain
 
+
+### Serverless.yml
+```
+service: myservice
+
+plugins:
+  - aws-cognito-idp-userpool-domain
+```
+
+### AWS::Cognito::UserPool resource
 ```
 Resources:
   MyUserpool:
