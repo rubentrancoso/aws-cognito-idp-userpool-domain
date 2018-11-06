@@ -1,0 +1,36 @@
+{
+  "name": "aws-cognito-idp-userpool-domain",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=4.0"
+  },
+  "description": "Serverless Plugin Boilerplate - A boilerplate/template for writing a plugin for the Serverless Framework.",
+  "author": "Ruben Trancoso <rubentrancoso@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serverless/serverless-plugin-boilerplate"
+  },
+  "keywords": [
+    "serverless plugin boilerplate",
+    "serverless plugin template",
+    "serverless plugin starter",
+    "serverless framework plugin",
+    "serverless applications",
+    "serverless plugins",
+    "api gateway",
+    "lambda",
+    "aws",
+    "aws lambda",
+    "amazon",
+    "amazon web services",
+    "serverless.com"
+  ],
+  "main": "index.js",
+  "bin": {},
+  "scripts": {},
+  "devDependencies": {},
+  "dependencies": {
+    "bluebird": "^3.0.6"
+  }
+}
