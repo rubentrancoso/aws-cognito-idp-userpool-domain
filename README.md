@@ -6,7 +6,9 @@ With this plugin you will be able to manage a hosted aws domain to the Cognito U
 You can find this and other plugins on [Severless Community Plugins](https://github.com/serverless/plugins) repository.
 
 ### installation
-npm install aws-cognito-idp-userpool-domain
+```bash
+$ npm install aws-cognito-idp-userpool-domain
+```
 
 ### npm package
 [https://www.npmjs.com/package/aws-cognito-idp-userpool-domain](https://www.npmjs.com/package/aws-cognito-idp-userpool-domain)
