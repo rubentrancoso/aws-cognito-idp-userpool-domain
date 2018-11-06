@@ -7,6 +7,8 @@ service: myservice
 
 plugins:
   - aws-cognito-idp-userpool-domain
+custom:
+  stage: ${opt:stage, self:provider.stage}  
 ```
 
 ### AWS::Cognito::UserPool resource
