@@ -9,6 +9,13 @@ plugins:
   - aws-cognito-idp-userpool-domain
 custom:
   stage: ${opt:stage, self:provider.stage}  
+  
+provider:
+  name: aws
+  runtime: nodejs8.10
+  profile: default
+  region: us-east-1
+  environment: ${self:custom.settings.${self:custom.stage}}  
 ```
 
 ### AWS::Cognito::UserPool resource
