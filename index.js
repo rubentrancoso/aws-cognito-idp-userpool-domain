@@ -169,15 +169,18 @@ class ServerlessPlugin {
     this.plugin_log('process_deploy started.');
     var that = this;
     try {
-      var userpoolids = await this.get_deployed_userpool_id();
-      userpoolids.forEach(function(userpoolid) {
-        var resource = that.serverless.service.resources.Resources[userpoolid.name.substring(10)];
-        var domain = resource.Properties.UserPoolName;
-        userpoolid.domain = domain;
-      });
-      for (var index in userpoolids) {
-        await that.create_userpool_domain(userpoolids[index].id, userpoolids[index].domain);
-      }
+      var userpoolids = await this.get_deployed_userpool_id()
+      userpoolids = userpoolids
+        .filter(upi => upi.name !== 'UserPoolId')
+        .map(upi => {
+          var cleanName = upi.name.substring(10)
+          var resource = that.serverless.service.resources.Resources[cleanName]
+          upi.domain = resource.Properties.UserPoolName
+          return upi
+        })
+      userpoolids.forEach(async ({ id, domain }) => {
+        await that.create_userpool_domain(id, domain)
+      })
     } catch (error) {
       this.plugin_log(error.stack);
     }
